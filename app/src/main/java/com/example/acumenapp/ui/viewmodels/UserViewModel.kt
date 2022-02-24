@@ -41,6 +41,7 @@ class UserViewModel @Inject constructor(private val repository: UserRepository) 
     fun deleteUserItem(user: User){
         viewModelScope.launch {
             repository.deleteUser(user)
+            //adding one line
         }
     }
     fun insertUsersItem(id:Int,name:String,email:String){
